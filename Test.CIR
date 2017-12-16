@@ -1,0 +1,50 @@
+CIRCUIT C:\Users\rbksh\Desktop\BITS\3-1\ADVD\Digital Project\Half Adder.MSK
+*
+* IC Technology: C:\Users\rbksh\Desktop\BITS\3-1\ADVD\Digital Project\drclvs_rsf\DRC.header
+*
+VDD 1 0 DC 1.20
+VB 2 0 DC 1.80
+V~B 6 0 DC 0.00
+V~A 7 0 PULSE(1.80 0.00 1.00N 0.03N 0.02N 1.00N 2.05N)
+VA 8 0 PULSE(0.00 1.80 1.00N 0.03N 0.02N 1.00N 2.05N)
+*
+* List of nodes
+* "B" corresponds to n°2
+* "S" corresponds to n°3
+* "GND" corresponds to n°4
+* "C" corresponds to n°5
+* "~B" corresponds to n°6
+* "~A" corresponds to n°7
+* "A" corresponds to n°8
+*
+* MOS devices
+
+*.param x 0.2U 3.2U 0.2U
+
+.param x=3.2U
+MN1 5 8 2 0 N1  W= {x} L= 0.18U
+MN2 3 8 6 0 N1  W= {x} L= 0.18U
+MN3 5 7 0 0 N1  W= {x} L= 0.18U
+MN4 3 7 2 0 N1  W= {x} L= 0.18U
+*
+*
+* Extra RLC
+*
+Cadd1 3 0 0.5pF
+Cadd2 5 0 0.5pF
+*
+* n-MOS Model 3 :
+* Standard
+.MODEL N1 NMOS LEVEL=3 VTO=0.40 UO=600.000 TOX= 2.0E-9
++LD =0.000U THETA=0.500 GAMMA=0.400
++PHI=0.200 KAPPA=0.060 VMAX=120.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* Transient analysis
+*
+.TEMP 27.0
+.TRAN 0.1N 5.00N
+* (Pspice)
+.PROBE
+.END

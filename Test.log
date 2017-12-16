@@ -1,0 +1,28 @@
+Circuit: CIRCUIT C:\Users\rbksh\Desktop\BITS\3-1\ADVD\Digital Project\Half Adder.MSK
+
+Model "n1": Oxide thickness thinner than recommended for a level 3 MOSFET.
+WARNING: Less than two connections to node 1.  This node is used by VDD.
+Instance "mn4": Length shorter than recommended for a level 3 MOSFET.
+Instance "mn3": Length shorter than recommended for a level 3 MOSFET.
+Instance "mn2": Length shorter than recommended for a level 3 MOSFET.
+Instance "mn1": Length shorter than recommended for a level 3 MOSFET.
+Direct Newton iteration for .op point succeeded.
+
+Date: Sun Oct 22 01:27:46 2017
+Total elapsed time: 0.086 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2579
+traniter = 2568
+tranpoints = 1199
+accept = 1144
+rejected = 55
+matrix size = 12
+fillins = 0
+solver = Normal
+Matrix Compiler1: 464 bytes object code size  0.1/0.1/[0.0]
+Matrix Compiler2: 850 bytes object code size  0.1/0.1/[0.1]
+
+

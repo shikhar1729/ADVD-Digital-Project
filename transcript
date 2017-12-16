@@ -1,0 +1,105 @@
+# Compile of oldmac.v failed with 1 errors.
+# Compile of oldmac.v was successful.
+# Compile of testbench1.v was successful.
+# Compile of alu.v was successful.
+vsim -gui work.testbench1
+# vsim -gui work.testbench1 
+# Loading work.testbench1
+# Loading work.oldmac
+# Loading work.alu
+vsim -gui work.alu work.oldmac work.testbench1
+# vsim -gui work.alu work.oldmac work.testbench1 
+# Loading work.alu
+# Loading work.oldmac
+# Loading work.testbench1
+vsim -L lpm -gui work.testbench1
+# vsim -L lpm -gui work.testbench1 
+# Loading work.testbench1
+# Loading work.oldmac
+# Loading work.alu
+add wave -position end  sim:/testbench1/clk
+add wave -position end  sim:/testbench1/start
+add wave -position end  sim:/testbench1/reset
+add wave -position end  sim:/testbench1/a
+vsim -L lpm -gui work.testbench1
+# vsim -L lpm -gui work.testbench1 
+# Loading work.testbench1
+# Loading work.oldmac
+# Loading work.alu
+add wave -position insertpoint  \
+sim:/testbench1/b
+add wave -position insertpoint  \
+sim:/testbench1/ab
+add wave -position insertpoint  \
+sim:/testbench1/a
+add wave -position insertpoint sim:/testbench1/*
+add wave -r /*
+run -all
+# ab:     x busy: x and sum is     0 at time=                   5
+# ab:     x busy: x and sum is     0 at time=                  15
+# first example: a = 3 b = 17
+# ab:    17 busy: 1 and sum is     0 at time=                  25
+# ab:    17 busy: 1 and sum is     0 at time=                  35
+# ab:    17 busy: 1 and sum is     0 at time=                  45
+# ab:    17 busy: 1 and sum is     0 at time=                  55
+# ab:    17 busy: 1 and sum is     0 at time=                  65
+# ab: 65160 busy: 1 and sum is     0 at time=                  75
+# ab:   196 busy: 1 and sum is     0 at time=                  85
+# ab:    98 busy: 1 and sum is     0 at time=                  95
+# ab:    49 busy: 1 and sum is     0 at time=                 105
+# ab: 65176 busy: 1 and sum is     0 at time=                 115
+# ab:   204 busy: 1 and sum is     0 at time=                 125
+# ab:   102 busy: 1 and sum is     0 at time=                 135
+# ab:    51 busy: 0 and sum is     0 at time=                 145
+# ab: 65177 busy: 0 and sum is    51 at time=                 155
+# first example done
+# second example: a = 7 b = 7
+# ab:     7 busy: 1 and sum is    51 at time=                 165
+# ab:     7 busy: 1 and sum is    51 at time=                 175
+# ab:     7 busy: 1 and sum is    51 at time=                 185
+# ab:     7 busy: 1 and sum is    51 at time=                 195
+# ab:     7 busy: 1 and sum is    51 at time=                 205
+# ab: 64643 busy: 1 and sum is    51 at time=                 215
+# ab: 65089 busy: 1 and sum is    51 at time=                 225
+# ab: 65312 busy: 1 and sum is    51 at time=                 235
+# ab:   784 busy: 1 and sum is    51 at time=                 245
+# ab:   392 busy: 1 and sum is    51 at time=                 255
+# ab:   196 busy: 1 and sum is    51 at time=                 265
+# ab:    98 busy: 1 and sum is    51 at time=                 275
+# ab:    49 busy: 0 and sum is    51 at time=                 285
+# ab: 64664 busy: 0 and sum is   100 at time=                 295
+# second example done
+# third: a = 8 b = 9
+# ab:     9 busy: 1 and sum is   100 at time=                 305
+# ab:     9 busy: 1 and sum is   100 at time=                 315
+# ab:     9 busy: 1 and sum is   100 at time=                 325
+# ab:     9 busy: 1 and sum is   100 at time=                 335
+# ab:     9 busy: 1 and sum is   100 at time=                 345
+# ab: 64516 busy: 1 and sum is   100 at time=                 355
+# ab:   514 busy: 1 and sum is   100 at time=                 365
+# ab:   257 busy: 1 and sum is   100 at time=                 375
+# ab: 64640 busy: 1 and sum is   100 at time=                 385
+# ab:   576 busy: 1 and sum is   100 at time=                 395
+# ab:   288 busy: 1 and sum is   100 at time=                 405
+# ab:   144 busy: 1 and sum is   100 at time=                 415
+# ab:    72 busy: 0 and sum is   100 at time=                 425
+# ab:    36 busy: 0 and sum is   172 at time=                 435
+# 3rd example done
+# fourth: a = -8 b = 5
+# ab:     5 busy: 1 and sum is   172 at time=                 445
+# ab:     5 busy: 1 and sum is   172 at time=                 455
+# ab:     5 busy: 1 and sum is   172 at time=                 465
+# ab:     5 busy: 1 and sum is   172 at time=                 475
+# ab:     5 busy: 1 and sum is   172 at time=                 485
+# ab:  1026 busy: 1 and sum is   172 at time=                 495
+# ab: 65025 busy: 1 and sum is   172 at time=                 505
+# ab:   768 busy: 1 and sum is   172 at time=                 515
+# ab: 64896 busy: 1 and sum is   172 at time=                 525
+# ab: 65216 busy: 1 and sum is   172 at time=                 535
+# ab: 65376 busy: 1 and sum is   172 at time=                 545
+# ab: 65456 busy: 1 and sum is   172 at time=                 555
+# ab: 65496 busy: 0 and sum is   172 at time=                 565
+# ab: 65516 busy: 0 and sum is   132 at time=                 575
+# 4th example done
+# ** Note: $finish    : C:/Users/rbksh/Desktop/BITS/3-1/ADVD/Digital Project/testbench1.v(31)
+#    Time: 580 ps  Iteration: 0  Instance: /testbench1

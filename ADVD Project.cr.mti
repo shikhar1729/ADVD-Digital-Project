@@ -1,0 +1,25 @@
+{C:/Users/rbksh/Desktop/BITS/3-1/ADVD/Digital Project/alu.v} {1 {vlog -work work {C:/Users/rbksh/Desktop/BITS/3-1/ADVD/Digital Project/alu.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} {C:/Users/rbksh/Desktop/BITS/3-1/ADVD/Digital Project/oldmac.v} {1 {vlog -work work {C:\Users\rbksh\Desktop\BITS\3-1\ADVD\Digital Project\oldmac.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module alu
+-- Compiling module oldmac
+
+Top level modules:
+	oldmac
+
+} {} {}} {C:/Users/rbksh/Desktop/BITS/3-1/ADVD/Digital Project/testbench1.v} {1 {vlog -work work {C:/Users/rbksh/Desktop/BITS/3-1/ADVD/Digital Project/testbench1.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module alu
+-- Compiling module oldmac
+-- Compiling module testbench1
+
+Top level modules:
+	testbench1
+
+} {} {}}
