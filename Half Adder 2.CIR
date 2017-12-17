@@ -1,0 +1,52 @@
+CIRCUIT D:\dc\ADVD\Half Adder 2.MSK
+*
+* IC Technology: CMOS 0.12µm - 6 Metal
+*
+VDD 1 0 DC 1.20
+VB 4 0 PULSE(0.00 1.20 0.50N 0.03N 0.03N 0.50N 1.05N)
+V~B 6 0 PULSE(1.20 0.00 0.50N 0.03N 0.03N 0.50N 1.05N)
+VA 7 0 PULSE(0.00 1.20 0.50N 0.03N 0.03N 0.50N 1.05N)
+V~A 8 0 PULSE(1.20 0.00 0.50N 0.03N 0.03N 0.50N 1.05N)
+*
+* List of nodes
+* "GND" corresponds to n°2
+* "C" corresponds to n°3
+* "B" corresponds to n°4
+* "S" corresponds to n°5
+* "~B" corresponds to n°6
+* "A" corresponds to n°7
+* "~A" corresponds to n°8
+*
+* MOS devices
+MN1 5 7 6 0 N1  W= 4.20U L= 0.18U
+MN2 5 8 4 0 N1  W= 4.20U L= 0.18U
+MN3 3 7 4 0 N1  W= 4.20U L= 0.18U
+MN4 3 8 0 0 N1  W= 4.20U L= 0.18U
+*
+C3 3 0  2.437fF
+C4 4 0  2.554fF
+C5 5 0  2.429fF
+C6 6 0  1.127fF
+C7 7 0  1.961fF
+C8 8 0  1.326fF
+*
+* Extra RLC
+*
+Cadd1 5 0 0.5pF
+Cadd2 3 0 0.5pF
+*
+* n-MOS Model 3 :
+* low leakage
+.MODEL N1 NMOS LEVEL=3 VTO=0.40 UO=600.000 TOX= 2.0E-9
++LD =0.000U THETA=0.500 GAMMA=0.400
++PHI=0.200 KAPPA=0.060 VMAX=120.00K
++CGSO=100.0p CGDO=100.0p
++CGBO= 60.0p CJSW=240.0p
+*
+* Transient analysis
+*
+.TEMP 27.0
+.TRAN 0.1N 5.00N
+* (Pspice)
+.PROBE
+.END
